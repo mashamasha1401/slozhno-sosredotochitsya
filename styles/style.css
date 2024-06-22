@@ -44,10 +44,17 @@
 
   padding-left: 20px;
   padding-right: 20px; 
-  /*изменение паддингов с 768 20px на 375 10px*/
-  padding-left: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
-  padding-right: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
   
+  
+  
+}
+
+@media (375px <= width <= 768px) {
+  .page {
+    /*изменение паддингов с 768 20px на 375 10px*/
+    padding-left: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+    padding-right: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+  }
 }
 
 /*Текст*/
@@ -106,20 +113,20 @@
 }
 
 @media  (width <= 768px) {
-  .header{
+  .header {
     height: 1024px;
   }
 }
 
 @media  (width <= 500px) {
-  .header{
+  .header {
     height: 668px;
     
   }
 }
 
 /*уголок сверху слева*/
-.header::before{
+.header::before {
   content: "";
   position: absolute;
   border: 1px solid var(--accent-color);
@@ -348,7 +355,7 @@
  
 .what__cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat (3, 1fr);
   /*grid-auto-flow: column;*/
   gap: 20px;
   
@@ -385,7 +392,7 @@
 }
 
 @media  (width <= 768px) {
-  .how{
+  .how {
     grid-template-columns: 236px 1fr 1fr;
     padding-top: 0px;
   }
@@ -437,7 +444,7 @@
 }
 
 @media  (width <= 768px) {
-  .img__conteiner{
+  .img__conteiner {
     grid-template-rows: 192px 230px 318px;
   }
 
@@ -537,7 +544,7 @@
 }
 
 @media  (width <= 768px) {
-  .footer{
+  .footer {
     height: 1024px;
   }
 
@@ -551,7 +558,7 @@
 }
 
 @media  (width <= 500px) {
-  .footer{
+  .footer {
     height: 667px;
   }
 
