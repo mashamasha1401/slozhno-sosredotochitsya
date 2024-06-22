@@ -52,14 +52,14 @@
 
 /*Текст*/
 /*заголовок розовый h2*/
-.title{
+.title {
   color: var(--accent-color);
   font-weight: 700;
   font-size: inherit;
 }
 
 /*стиль для розового фона*/
-.title-decor{
+.title-decor {
   background: var(--accent-color-bg);
   color: var(--text-title-color);
   font-weight: 700;
@@ -67,7 +67,7 @@
 }
 
 /*розовый фон шрифт тонкий*/
-.title-decor_thin{
+.title-decor_thin {
   font-weight: 400;
 }
 
@@ -80,7 +80,7 @@
 }
 
 /*стили для ссылок*/
-.content__shadow{
+.content__shadow {
   text-shadow: 2px 2px 0 var(--text-shadow-content);
 }
 
@@ -97,7 +97,7 @@
 } 
 
 /*Шапка*/
-.header{
+.header 
   height: 768px;
   width: 100%;
   display: grid;
@@ -131,7 +131,7 @@
 }
 
 /*уголок снизу справа*/
-.header::after{
+.header::after {
   content: "";
   position: absolute;
   border: 1px solid var(--accent-color);
@@ -172,16 +172,16 @@
     top: 10px;
   }
 
-  .header::before{
+  .header::before {
     top: 10px;
   }
 
-  .header::after{
+  .header::after {
     bottom: 10px;
   }
 }
 
-.header__theme-menu-list{
+.header__theme-menu-list {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -214,7 +214,7 @@
   border-bottom: solid 1px var(--accent-color);
 } 
 
-.header__theme-menu-button{
+.header__theme-menu-button {
   color: var(--accent-color);
   background-color: transparent;
   cursor: pointer;
@@ -222,14 +222,14 @@
   padding: 0 13px;
 }
 
-.header__theme-menu-button_active{
+.header__theme-menu-button_active {
   border: 1px solid #ff0070;
   pointer-events: none;
 }
 
 
 /*надпись no focus*/
-.header__title{
+.header__title {
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
   margin-left: -20px;
   color: var(--title-accent-color);
@@ -292,7 +292,7 @@
   gap: 20px;
 }
 
-.why__cards{
+.why__cards {
   grid-column-start: 2;
   grid-column-end: 4;
   display: grid;
@@ -311,7 +311,7 @@
     grid-template-rows: auto 1fr 1fr;
   }
 
-  .why__cards{
+  .why__cards {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
@@ -320,7 +320,7 @@
 }
 
 /* для стилизации любой карточки*/
-.card{
+.card {
   display: grid;
   grid-template-rows: min-content auto;
   gap: 10px;
@@ -328,25 +328,25 @@
 
 
 /*секция_2 ЧТО*/
-.what{
+.what {
   height: min-content;
   display: grid;
   grid-template-rows:  min-content 1fr;
   gap: 20px;
 }
 
-.conteiner__what__title{
+.conteiner__what__title {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   
 }
 
-.what__title{
+.what__title {
   grid-column-start: 1;
   grid-column-end: 2;
 }
  
-.what__cards{
+.what__cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   /*grid-auto-flow: column;*/
@@ -359,11 +359,11 @@
     padding-top: 0px;
   }
 
-  .conteiner__what__title{
+  .conteiner__what__title {
     grid-template-columns: 236px 1fr 1fr;
   }
   
-  .what__cards{
+  .what__cards {
     grid-template-columns: 1fr;
     grid-template-rows: min-content min-content min-content;
   }
@@ -377,7 +377,7 @@
 }
 
 /*секция_3 КАК*/
-.how{
+.how {
   height: min-content;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -391,14 +391,14 @@
   }
 }
 
-.how__cards{
+.how__cards {
   grid-column-start: 2;
   grid-column-end: 4;
   display: grid;
   gap: 20px;
 }
 
-.card__how{
+.card__how {
   display: grid;
   grid-template-rows: min-content min-content;
   gap: 10px;
@@ -410,21 +410,21 @@
     margin-top: -2px;
   }
 
-  .how__cards{
+  .how__cards {
     grid-column-start: 1;
     grid-column-end: 2;
   }
 }
 
 /*секция_4 А МОЖНО В КАРТИНКАХ*/
-.in__img{
+.in__img {
   display: grid;
   gap: 20px;
   width: 100%;
   height: min-content;
 }
 
-.img__conteiner{
+.img__conteiner {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
@@ -441,17 +441,17 @@
     grid-template-rows: 192px 230px 318px;
   }
 
-  .in__img{
+  .in__img {
     padding-block-start: 0px;
   }
 }
 
 @media  (width <= 500px) {
-  .in__img{
+  .in__img {
     gap: 10px;
   }
 
-  .img__conteiner{
+  .img__conteiner {
     grid-template-columns: 1fr ;
     grid-template-rows: repeat(5,auto);
     grid-template-areas:
@@ -465,7 +465,7 @@
 
 }
 
-.img__card{
+.img__card {
   object-fit: cover;
   object-position: center;
   display: block;
@@ -473,28 +473,28 @@
   height: 100%;
 }
 
-.sunset{
+.sunset {
   grid-area: sunset;
 }
 
-.ice-cream{
+.ice-cream {
   grid-area: ice-cream;
 }
 
-.tape{
+.tape {
   grid-area: tape;
 }
 
-.books{
+.books {
   grid-area: books;
 }
 
-.street{
+.street {
   grid-area: street;
 }
 
 /*ФУТЕР*/
-.footer{
+.footer {
   
   height: 768px;
   width: 100%;
@@ -504,7 +504,7 @@
   padding: 20px 0 20px 0;
 }
 
-.footer__title{
+.footer__title {
   margin-top: 2px;
   align-content: center;
   font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem); /*размер шрифта для 1024=157px, для 768=120px , для 375=116px*/
@@ -513,7 +513,7 @@
 }
 
 /*уголок сверху слева*/
-.footer::before{
+.footer::before {
   content: "";
   position: absolute;
   border: 1px solid var(--accent-color);
@@ -525,7 +525,7 @@
 }
 
 /*уголок снизу справа*/
-.footer::after{
+.footer::after {
   content: "";
   position: absolute;
   border: 1px solid var(--accent-color);
@@ -541,11 +541,11 @@
     height: 1024px;
   }
 
-  .footer::before{
+  .footer::before {
     top: 16px;
   }
 
-  .footer::after{
+  .footer::after {
     bottom: 24px;
   }
 }
@@ -555,11 +555,11 @@
     height: 667px;
   }
 
-  .footer::before{
+  .footer::before {
     top: 10px;
   }
 
-  .footer::after{
+  .footer::after {
     bottom: 10px;
   }
 }
