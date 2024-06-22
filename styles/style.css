@@ -95,7 +95,8 @@
 } 
 
 .link:focus {
-  outline: 1px solid var(--text-color); 
+  outline: 1px solid var(--text-color
+  ); 
 } 
 
 /*Шапка*/
