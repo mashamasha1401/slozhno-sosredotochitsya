@@ -1,5 +1,565 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+/*
+.img_referens{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.5;
+  width: 1024px;
+  height: auto;
+}
+
+.img_referens768{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.5;
+  width: 768px;
+  height: auto;
+}
+
+.img_referens375{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.5;
+  width: 375px;
+  height: auto;
+}*/
+
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  min-inline-size: 375px;
+  max-inline-size: 1024px;
+  font-size: 18px;
+  font-family: var(--main-font, sans-serif);
+  
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  padding-left: 20px;
+  padding-right: 20px; 
+  /*изменение паддингов с 768 20px на 375 10px*/
+  padding-left: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+  padding-right: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+  
+}
+
+/*Текст*/
+/*заголовок розовый h2*/
+.title{
+  color: var(--accent-color);
+  font-weight: 700;
+  font-size: inherit;
+}
+
+/*стиль для розового фона*/
+.title-decor{
+  background: var(--accent-color-bg);
+  color: var(--text-title-color);
+  font-weight: 700;
+  font-size: inherit;
+}
+
+/*розовый фон шрифт тонкий*/
+.title-decor_thin{
+  font-weight: 400;
+}
+
+/*нежно розовый текст*/
+.content__paragraph {
+  color: var(--text-color, #f1b2ce);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.4px;
+}
+
+/*стили для ссылок*/
+.content__shadow{
+  text-shadow: 2px 2px 0 var(--text-shadow-content);
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link:hover {
+  border-bottom: 1px solid var(--text-color);
+} 
+
+.link:focus {
+  outline: 1px solid var(--text-color); 
+} 
+
+/*Шапка*/
+.header{
+  height: 768px;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+  position: relative;
+}
+
+@media  (width <= 768px) {
+  .header{
+    height: 1024px;
+  }
+}
+
+@media  (width <= 500px) {
+  .header{
+    height: 668px;
+    
+  }
+}
+
+/*уголок сверху слева*/
+.header::before{
+  content: "";
+  position: absolute;
+  border: 1px solid var(--accent-color);
+  border-width: 1px 1px 0 0;
+  width: 25px;
+  height: 25px;
+  right: 0px;
+  top: 20px;
+}
+
+/*уголок снизу справа*/
+.header::after{
+  content: "";
+  position: absolute;
+  border: 1px solid var(--accent-color);
+  border-width: 0px 0px 1px 1px;
+  width: 25px;
+  height: 25px;
+  left: 0px;
+  bottom: 20px;
+}
+
+/*стиль для надписи REC*/
+.decorated-zone__text {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 400;
+  color: var(--accent-color);
+  line-height: 25px;
+}
+
+/*кружочек*/
+.decorated-zone__text::after {
+  position: absolute;
+  content: "";
+  height: 9px;
+  width: 9px;
+  top: 8px;
+  right: -19px;
+  background: var(--accent-color);
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  border-radius: 50%;
+}
+
+@media  (width <= 500px) {
+  .decorated-zone__text {
+    top: 10px;
+  }
+
+  .header::before{
+    top: 10px;
+  }
+
+  .header::after{
+    bottom: 10px;
+  }
+}
+
+.header__theme-menu-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+  height: 100%;
+}
+
+@media  (width <= 768px) {
+  .header__theme-menu-list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+}
+
+@media  (width <= 500px) {
+  .header__theme-menu-list{
+    margin-top: 5px;
+  }
+}
+
+.header__theme-menu-item:hover {
+  outline: 1px solid rgba(255, 0, 112, 0.4);  
+} 
+
+.header__theme-menu-item:focus {
+  border-bottom: solid 1px var(--accent-color);
+} 
+
+.header__theme-menu-button{
+  color: var(--accent-color);
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  padding: 0 13px;
+}
+
+.header__theme-menu-button_active{
+  border: 1px solid #ff0070;
+  pointer-events: none;
+}
+
+
+/*надпись no focus*/
+.header__title{
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
+  margin-left: -20px;
+  color: var(--title-accent-color);
+  text-shadow: 4px 4px 0 var(--text-shadow);
+}
+
+@media (width <=500px) {
+  .header__title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    line-height: 82.5%;
+    margin-left: 0px;
+  }
+}
+
+/*параграф в шапке*/
+.header__paragraph {
+  width: 50%;
+  height: min-content;
+  margin-block-start: 78px;
+  margin-left: 50%;
+  line-height: 23.4px;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+@media  (width <= 768px) {
+  .header__paragraph {
+    margin-block-start: 134px;
+  }
+}
+
+@media (width <=500px) {
+  .header__paragraph {
+    margin-left: 0;
+    width: 100%;
+    margin-block-start: 55px;
+  }
+}
+
+/*main*/
+.main__conteiner {
+  margin-top: clamp(2.5rem, 1.3073rem + 5.0891vw, 3.75rem);
+  margin-bottom: clamp(2.5rem, 1.3073rem + 5.0891vw, 3.75rem); 
+  display: grid;
+  gap: 80px;
+
+}
+
+@media (width <=500px) {
+  .main__conteiner {
+    gap: 50px;
+  }
+}
+
+/*cекция_1 ПОЧЕМУ*/
+.why {
+  height: min-content;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.why__cards{
+  grid-column-start: 2;
+  grid-column-end: 4;
+  display: grid;
+  gap: 20px;
+}
+
+@media  (width <= 768px) {
+  .why {
+    grid-template-columns: 236px 1fr 1fr;
+  }
+}
+
+@media  (width <= 500px) {
+  .why{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr 1fr;
+  }
+
+  .why__cards{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+}
+
+/* для стилизации любой карточки*/
+.card{
+  display: grid;
+  grid-template-rows: min-content auto;
+  gap: 10px;
+}
+
+
+/*секция_2 ЧТО*/
+.what{
+  height: min-content;
+  display: grid;
+  grid-template-rows:  min-content 1fr;
+  gap: 20px;
+}
+
+.conteiner__what__title{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+}
+
+.what__title{
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+ 
+.what__cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /*grid-auto-flow: column;*/
+  gap: 20px;
+  
+}
+
+@media  (width <= 768px) {
+  .what{
+    padding-top: 0px;
+  }
+
+  .conteiner__what__title{
+    grid-template-columns: 236px 1fr 1fr;
+  }
+  
+  .what__cards{
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content min-content;
+  }
+}
+
+@media  (width <= 500px) {
+  .conteiner__what__title{
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/*секция_3 КАК*/
+.how{
+  height: min-content;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+@media  (width <= 768px) {
+  .how{
+    grid-template-columns: 236px 1fr 1fr;
+    padding-top: 0px;
+  }
+}
+
+.how__cards{
+  grid-column-start: 2;
+  grid-column-end: 4;
+  display: grid;
+  gap: 20px;
+}
+
+.card__how{
+  display: grid;
+  grid-template-rows: min-content min-content;
+  gap: 10px;
+}
+
+@media  (width <= 500px) {
+  .how{
+    grid-template-columns: 1fr;
+    margin-top: -2px;
+  }
+
+  .how__cards{
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}
+
+/*секция_4 А МОЖНО В КАРТИНКАХ*/
+.in__img{
+  display: grid;
+  gap: 20px;
+  width: 100%;
+  height: min-content;
+}
+
+.img__conteiner{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  grid-template-rows: 260px 315px 428px;
+  width: 100%;
+  grid-template-areas:
+  "sunset sunset ice-cream"
+  "tape books ice-cream"
+  "tape street street";
+}
+
+@media  (width <= 768px) {
+  .img__conteiner{
+    grid-template-rows: 192px 230px 318px;
+  }
+
+  .in__img{
+    padding-block-start: 0px;
+  }
+}
+
+@media  (width <= 500px) {
+  .in__img{
+    gap: 10px;
+  }
+
+  .img__conteiner{
+    grid-template-columns: 1fr ;
+    grid-template-rows: repeat(5,auto);
+    grid-template-areas:
+    "sunset" 
+    "ice-cream"
+    "tape"
+    "books" 
+    "street";
+    gap: 10px;
+  }
+
+}
+
+.img__card{
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.sunset{
+  grid-area: sunset;
+}
+
+.ice-cream{
+  grid-area: ice-cream;
+}
+
+.tape{
+  grid-area: tape;
+}
+
+.books{
+  grid-area: books;
+}
+
+.street{
+  grid-area: street;
+}
+
+/*ФУТЕР*/
+.footer{
+  
+  height: 768px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 20px 0 20px 0;
+}
+
+.footer__title{
+  margin-top: 2px;
+  align-content: center;
+  font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem); /*размер шрифта для 1024=157px, для 768=120px , для 375=116px*/
+  color: var(--title-accent-color);
+  text-shadow: 2px 2px 0 var(--text-shadow);
+}
+
+/*уголок сверху слева*/
+.footer::before{
+  content: "";
+  position: absolute;
+  border: 1px solid var(--accent-color);
+  border-width: 1px 1px 0 0;
+  width: 25px;
+  height: 25px;
+  right: 0px;
+  top: 22px;
+}
+
+/*уголок снизу справа*/
+.footer::after{
+  content: "";
+  position: absolute;
+  border: 1px solid var(--accent-color);
+  border-width: 0px 0px 1px 1px;
+  width: 25px;
+  height: 25px;
+  left: 0px;
+  bottom: 17px;
+}
+
+@media  (width <= 768px) {
+  .footer{
+    height: 1024px;
+  }
+
+  .footer::before{
+    top: 16px;
+  }
+
+  .footer::after{
+    bottom: 24px;
+  }
+}
+
+@media  (width <= 500px) {
+  .footer{
+    height: 667px;
+  }
+
+  .footer::before{
+    top: 10px;
+  }
+
+  .footer::after{
+    bottom: 10px;
+  }
 }
