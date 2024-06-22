@@ -33,8 +33,6 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  min-inline-size: 375px;
-  max-inline-size: 1024px;
   font-size: 18px;
   font-family: var(--main-font, sans-serif);
   background-position: center;
