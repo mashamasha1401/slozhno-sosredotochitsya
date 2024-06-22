@@ -95,8 +95,7 @@
 } 
 
 .link:focus {
-  outline: 1px solid var(--text-color
-  ); 
+  outline: 1px solid var(--text-color);
 } 
 
 /*Шапка*/
@@ -210,7 +209,7 @@
 }
 
 .header__theme-menu-item:hover {
-  outline: 1px solid rgba(255, 0, 112, 0.4);  
+  outline: 1px solid rgba(255, 0, 112, 0.4);
 } 
 
 .header__theme-menu-item:focus {
@@ -275,9 +274,10 @@
 /*main*/
 .main__conteiner {
   margin-top: clamp(2.5rem, 1.3073rem + 5.0891vw, 3.75rem);
-  margin-bottom: clamp(2.5rem, 1.3073rem + 5.0891vw, 3.75rem); 
+  margin-bottom: clamp(2.5rem, 1.3073rem + 5.0891vw, 3.75rem);
   display: grid;
   gap: 80px;
+
 }
 
 @media (width <=500px) {
@@ -375,7 +375,6 @@
   .conteiner__what__title {
     grid-template-columns: 1fr;
   }
-
 }
 
 /*секция_3 КАК*/
