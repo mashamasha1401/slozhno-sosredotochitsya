@@ -386,7 +386,7 @@
 @media  (width <= 768px) {
   .how {
     grid-template-columns: 236px 1fr 1fr;
-    padding-top: 0px;
+    /*padding-top: 0px;*/
   }
 }
 
@@ -406,7 +406,7 @@
 @media  (width <= 500px) {
   .how {
     grid-template-columns: 1fr;
-    margin-top: -2px;
+    /*margin-top: -2px;*/
   }
 
   .how__cards {
@@ -439,10 +439,6 @@
   .img__conteiner {
     grid-template-rows: 192px 230px 318px;
   }
-
-  .in__img {
-    padding-block-start: 0px;
-  }
 }
 
 @media  (width <= 500px) {
@@ -461,7 +457,6 @@
     "street";
     gap: 10px;
   }
-
 }
 
 .img__card {
@@ -494,7 +489,6 @@
 
 /*ФУТЕР*/
 .footer {
-  
   height: 100vh;
   width: 100%;
   display: flex;
@@ -505,7 +499,6 @@
 }
 
 .footer__title {
-  margin-top: 2px;
   align-content: center;
   font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem); /*размер шрифта для 1024=157px, для 768=120px , для 375=116px*/
   color: var(--title-accent-color);
@@ -537,10 +530,6 @@
 }
 
 @media  (width <= 768px) {
-  .footer {
-    height: 1024px;
-  }
-
   .footer::before {
     top: 16px;
   }
@@ -551,10 +540,6 @@
 }
 
 @media  (width <= 500px) {
-  .footer {
-    height: 667px;
-  }
-
   .footer::before {
     top: 10px;
   }
