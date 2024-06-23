@@ -1,7 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 /* */
-.img_referens{
+.img_referens {
   position: absolute;
   top: 0;
   left: 50%;
@@ -11,7 +11,7 @@
   height: auto;
 }
 
-.img_referens768{
+.img_referens768 {
   position: absolute;
   top: 0;
   left: 50%;
@@ -21,7 +21,7 @@
   height: auto;
 }
 
-.img_referens375{
+.img_referens375 {
   position: absolute;
   top: 0;
   left: 50%;
@@ -98,25 +98,25 @@
 
 /*Шапка*/
 .header {
-  height: 768px;
+  height: 100vh;
   width: 100%;
   display: grid;
   grid-template-rows: 1fr auto 1fr;
   position: relative;
 }
-
+/*
 @media (width <= 768px) {
   .header {
-    height: 1024px;
+    height: 100vh;
   }
 }
 
 @media (width <= 500px) {
   .header {
-    height: 668px;
+    height: 100vh;
     
   }
-}
+}*/
 
 /*уголок сверху слева*/
 .header::before {
@@ -495,10 +495,11 @@
 /*ФУТЕР*/
 .footer {
   
-  height: 768px;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   position: relative;
   padding: 20px 0 20px 0;
 }
