@@ -227,7 +227,6 @@
   pointer-events: none;
 }
 
-
 /*надпись no focus*/
 .header__title {
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
@@ -338,7 +337,6 @@
 .conteiner__what__title {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  
 }
 
 .what__title {
@@ -348,10 +346,8 @@
  
 .what__cards {
   display: grid;
-  grid-template-columns: repeat (3, 1fr);
-  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
-  
 }
 
 @media  (width <= 768px) {
@@ -406,7 +402,7 @@
 @media  (width <= 500px) {
   .how {
     grid-template-columns: 1fr;
-    /*margin-top: -2px;*/
+    margin-top: -2px;
   }
 
   .how__cards {
@@ -500,7 +496,7 @@
 
 .footer__title {
   align-content: center;
-  font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem); /*размер шрифта для 1024=157px, для 768=120px , для 375=116px*/
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
   color: var(--title-accent-color);
   text-shadow: 2px 2px 0 var(--text-shadow);
 }
@@ -536,6 +532,10 @@
 
   .footer::after {
     bottom: 24px;
+  }
+
+  .footer__title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem) ;
   }
 }
 
