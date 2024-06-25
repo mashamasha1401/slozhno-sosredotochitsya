@@ -93,30 +93,34 @@
 } 
 
 .link:focus {
+  outline: none;
+} 
+
+.link:focus-visible {
   outline: 1px solid var(--text-color);
 } 
 
 /*Шапка*/
 .header {
   height: 100vh;
+  min-height: 768px;
   width: 100%;
   display: grid;
   grid-template-rows: 1fr auto 1fr;
   position: relative;
 }
-/*
+
 @media (width <= 768px) {
   .header {
-    height: 100vh;
+    min-height: 1024px;
   }
 }
 
 @media (width <= 500px) {
   .header {
-    height: 100vh;
-    
+    min-height: 668px;
   }
-}*/
+}
 
 /*уголок сверху слева*/
 .header::before {
@@ -206,14 +210,6 @@
   }
 }
 
-.header__theme-menu-item:hover {
-  outline: 1px solid rgba(255, 0, 112, 0.4);
-} 
-
-.header__theme-menu-item:focus {
-  border-bottom: solid 1px var(--accent-color);
-} 
-
 .header__theme-menu-button {
   color: var(--accent-color);
   background-color: transparent;
@@ -222,8 +218,20 @@
   padding: 0 13px;
 }
 
+.header__theme-menu-button:hover {
+  outline: 1px solid rgba(255, 0, 112, 0.4);
+} 
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--accent-color);
+} 
+
+.header__theme-menu-button:focus {
+  outline: none;
+} 
+
 .header__theme-menu-button_active {
-  border: 1px solid #ff0070;
+  outline: 1px solid var(--accent-color);
   pointer-events: none;
 }
 
@@ -486,6 +494,7 @@
 /*ФУТЕР*/
 .footer {
   height: 100vh;
+  min-height: 768px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -526,6 +535,10 @@
 }
 
 @media  (width <= 768px) {
+  .footer {
+    min-height: 1024px;
+  }
+
   .footer::before {
     top: 16px;
   }
@@ -540,6 +553,10 @@
 }
 
 @media  (width <= 500px) {
+  .footer {
+    min-height: 667px;
+  }
+
   .footer::before {
     top: 10px;
   }

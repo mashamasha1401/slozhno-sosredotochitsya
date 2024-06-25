@@ -34,6 +34,10 @@
   box-shadow: 0px 0px 4px 2px var(--accent-color);
 }
 
+.theme_dark .header__theme-menu-button:hover {
+  outline: 1px solid rgba(255, 0, 112, 0.4);
+} 
+
 @media (prefers-color-scheme: dark) {
   :root {
   --bg-color: #000028;
@@ -51,4 +55,8 @@
     background-color: var(--bg-color);
     background-image: url(../images/cover-image-dark.png);
   }
+
+  .header__theme-menu-button:hover {
+    outline: 1px solid rgba(255, 0, 112, 0.4);
+  } 
 }
